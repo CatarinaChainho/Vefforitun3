@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			
+		</title>
+	</head>
+	<body>
+		<div id="root">
+			<p v-text = "counter"></p>
+			<button @click="incrementCounter" v-show="counter != 10">
+				Click Me! It turns me on
+			</button>
+			<button @click="decrementCounter" v-show="counter != -10">
+				Push Me! It turns me off
+			</button>
+		</div>
+		<script src="https://unpkg.com/vue"></script>
+		<script type="text/javascript">
+			var app = new Vue ({
+				el: "#root",
+				data: {
+					counter: 0
+				},
+				methods: {
+					incrementCounter: function() {
+						this.counter += 1;
+						if (this.counter >= 10) {
+							this.counter = 10
+						}
+					},
+					decrementCounter: function() {
+						this.counter -= 1;
+						if (this.counter <= -10){
+							this.counter = -10;
+
+						}
+					},
+
+				},
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<div id="root">
+			<input type="text" v-model="myInput">
+			<input type="hidden" v-model="myInput">
+			<button @click="pushMe">Touch Me!</button>
+			<p>Your text is: {{textInput}}</p>
+		</div>
+		<script src="https://unpkg.com/vue"></script>
+		<script type="text/javascript">
+			var app = new Vue ({
+				el: "#root",
+				data: {
+					textInput: '',
+					myInput: '',
+				},
+				methods: {
+					pushMe: function() {
+						this.textInput= this.myInput
+						this.myInput = ''
+					},
+				}
+			})
+		</script>
+	</body>
+</html>
