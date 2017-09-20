@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<div id="app">
+			<p v-for="item in items" v-text="item.name + ' ('+item.population+')'"></p>
+		</div>
+		<script src="https://unpkg.com/vue"></script>
+		<script type="text/javascript">
+			var app = new Vue({
+				el: '#app',
+				data: {
+					items: [
+						{  name: 'Ísland', population: 334252 }
+					]
+				}
+			});
+		</script>
+	</body>
+</html>

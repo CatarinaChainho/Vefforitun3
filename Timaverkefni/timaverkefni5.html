@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Timaverkefni 5</title>
+	</head>
+	<body>
+		<div id="app">
+			<p v-for="names in people" v-if="names.age < 50">{{names.name}}</p>
+		</div>
+		<script src="https://unpkg.com/vue"></script>
+		<script type="text/javascript">
+			var app = new Vue({
+				el: '#app',
+				data: {
+					people: [
+					{  name: 'Birna', age: 50 },
+					{  name: 'Jón', age: 10 },
+					{  name: 'Sigga', age: 25 },
+					{  name: 'Kolla', age: 49 },
+					{  name: 'Ólafur', age: 67 }
+				]
+
+				}
+			});
+		</script>
+	</body>
+</html>
