@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+			input {
+				border-bottom: 2px solid;
+				border-color: #D3D3D3;
+			}
+			input:focus {
+				border-bottom-color: #ff6347;
+			}
+			button{
+				color: white;
+				background-color: #1e90ff;
+				border: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<form action="https://www.google.is/search">
+				<input type="text" v-model="userInput">
+				<input type="hidden" v-model="userInput" name="q">
+				<button type="submit">Submit</button>
+			</form>
+		</div>
+		<script src="https://unpkg.com/vue"></script>
+		<script type="text/javascript">
+			var app = new Vue({
+				el: '#app',
+				data: {
+				userInput: '',
+				}
+			});
+		</script>
+	</body>
+</html>
