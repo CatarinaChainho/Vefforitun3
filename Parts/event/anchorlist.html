@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		a {
+			display: block;
+		}
+	</style>
+</head>
+<body>
+<div id="app">
+	<a v-for="link in anchors" @:click.prevent="handleClick(link)" :href="link" v-text='link'></a>
+	<p>The Link is: {{Clicked}}</p>
+</div>
+<script src="https://unpkg.com/vue"></script>
+<script type="text/javascript">
+	var app = new Vue({
+		el: "#app",
+		data: {
+			anchors: [
+			"https://www.google.is/webhp",
+			"https://www.visir.is",
+			"https://www.facebook.com",
+			"https://www.vf.is",
+			],
+			Clicked: ""
+		},
+		methods: {
+  			handleClick: function (link) {
+   				this.Clicked = link;
+  			}
+		}
+
+	});
+</script>
+</body>
+</html>

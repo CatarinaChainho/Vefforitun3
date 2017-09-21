@@ -9,7 +9,9 @@
 	<div id="root">
 		<input type="text" v-model="task">
 		<button @click="create">Create task</button>
-		<p v-for = "value in tasks">{{value}}</p>
+		<ul>
+			<li v-for = "value in tasks">{{value}}</li>
+		</ul>
 	</div>
 	<script src="https://unpkg.com/vue"></script>
 	<script type="text/javascript">
@@ -22,9 +24,10 @@
 			methods: {
 				create: function(){
 					this.tasks.push(this.task)
+					this.task = ''
 				}
 			}
-		})
+		});
 	</script>
 	</body>
 </html>
