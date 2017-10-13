@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+		<style type="text/css">
+			.primary {
+				font-weight: bold;
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<input type="checkbox" id="checkbox" v-model=isPrimary>
+			<label for="checkbox">Check to see what happens</label>
+			<p v-bind:class="{ primary: isPrimary }">Hello World</p>
+		</div>
+		<script src="https://unpkg.com/vue"></script>
+		<script type="text/javascript">
+			var app = new Vue({
+				el: "#app",
+				data: {
+					message: "Hello World"
+					}
+			});
+		</script>
+	</body>
+</html>
