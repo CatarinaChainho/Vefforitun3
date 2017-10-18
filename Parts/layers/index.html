@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.css">
+		<title></title>
+	</head>
+	<body>
+		<div id="app">
+			<section class="hero is-success is-fullheight">
+				<div class="hero-body">
+					<div class="container has-text-centered">
+						<h1 class="title">
+							Full Height title
+						</h1>
+						<div class="columns is-centered">
+							<div class="column is-4">
+								<div class="field">
+									<div class="control">
+										<input class="input is-primary" type="text" placeholder="Decimal" v-model="decimal">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="columns is-centered">
+							<div class="column is-4">
+								<div class="field">
+									<div class="control">
+										<input class="input is-primary" type="text" placeholder="Binary" v-model="binary">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="columns is-centered">
+							<div class="column is-4">
+								<div class="field">
+									<div class="control">
+										<input class="input is-primary" type="text" placeholder="Hexadecimal" v-model="hex">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<script src="https://unpkg.com/vue"></script>
+		<script src="index.js"></script>
+	</body>
+</html>
