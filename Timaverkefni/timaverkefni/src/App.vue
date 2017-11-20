@@ -1,16 +1,25 @@
 <template>
-    <div id="app columns">
-        <div class="column is-offset-5">
-          <input type="number">
-          <button>Sort By Company</button>
-          <button>Sort By Besin Price</button>
-          <button>Sort By Diesel Price</button>
+    <div id="app" class="column is-one-third is-offset-4">
+        <div class="column" style="margin:20px; padding-bottom: 20px;">
+          <label style="float:left;">Filter</label><br>
+          <div>
+            <input type="radio" name="all">All
+            <input type="radio" name="atlantsolia">Atlantsolia
+            <input type="radio" name="costco">CostCo Iceland
+            <input type="radio" name="daelan">Dælan
+            <input type="radio" name="n1">N1
+            <input type="radio" name="olis">Olís
+            <input type="radio" name="orkan">Orkan
+            <input type="radio" name="orkanx">Orkan x
+            <input type="radio" name="ob">ÓB
+          </div>
+          <p>Amount of Stations:{{}}</p>
         </div>
-          <div class="box column is-one-third has-text-centered is-offset-4" id="place" v-for="petrol in response">
-              <h1 class="title">{{petrol.company}}</h1>
-              <p>Station: {{petrol.name}}</p>
-              <p>Bensin95: {{petrol.bensin95}}</p>
-              <p>Diesel: {{petrol.diesel}}</p>
+          <div class="box" id="place" v-for="petrol in response">
+              <h1 style="float:left;">{{petrol.company}}</h1>
+              <h1 style="float:right;">Bensin95: {{petrol.bensin95}}</h1><br>
+              <h1 style="float:left;">Station: {{petrol.name}}</h1>
+              <h1 style="float:right;">Diesel: {{petrol.diesel}}</h1>
           </div>
     </div>
 </template>
