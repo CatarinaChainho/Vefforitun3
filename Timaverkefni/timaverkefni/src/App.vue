@@ -1,25 +1,17 @@
 <template>
     <div id="app" class="column is-one-third is-offset-4">
-        <div class="column" style="padding-bottom: 20px;">
-          <label style="float:left;">Filter</label><br>
-          <div style="text-align:center;">
-            <input type="radio" v-model="selectedCompanies" name="all">All
-            <input type="radio" v-model="selectedCompanies" name="atlantsolia">Atlantsolia
-            <input type="radio" v-model="selectedCompanies" name="costco">CostCo Iceland
-            <input type="radio" v-model="selectedCompanies" name="daelan">Dælan
-            <input type="radio" v-model="selectedCompanies" name="n1">N1 <br>
-            <input type="radio" v-model="selectedCompanies" name="olis">Olís
-            <input type="radio" v-model="selectedCompanies" name="orkan">Orkan
-            <input type="radio" v-model="selectedCompanies" name="orkanx">Orkan x
-            <input type="radio" v-model="selectedCompanies" name="ob">ÓB
-          </div><br>
-        </div>
-          <p>Amount of Stations: {{response.length}}</p>
+          <div class="column">
+               <label style="float:left; color:#C0C0C0">Filter</label><br>
+               <div style="text-align:center; display:inline-block; padding-left:5px;">
+                    <input type="radio" :value="companies">{{companies}}
+               </div><br>
+          </div>
+          <p>Amount of Stations: {{response.length}}</p><br>
           <div class="box" id="place" v-for="petrol in response">
               <h1 style="float:left; color:black">{{petrol.company}}</h1>
-              <h1 style="float:right; color:gray">Bensin95: {{petrol.bensin95}}</h1><br>
-              <h1 style="float:left; color:black">Station: {{petrol.name}}</h1>
-              <h1 style="float:right; color:gray">Diesel: {{petrol.diesel}}</h1>
+              <h1 style="float:right; color:#c0c0c0">Bensin95 - {{petrol.bensin95}}</h1><br><br>
+              <h1 style="float:left; color:black">{{petrol.name}}</h1>
+              <h1 style="float:right; color:#c0c0c0">Diesel - {{petrol.diesel}}</h1><br>
           </div>
     </div>
 </template>
@@ -31,7 +23,7 @@
                return{
                     response: [],
                     maxBensinPrice : 0,
-                    selectedCompanies: "All"
+                    companies: petrol.company
                };
           },
          computed: {
@@ -74,7 +66,7 @@
 </script>
 
 <style>
-     #place:hover{
+     .box:hover{
           color: black;
      }
 </style>
