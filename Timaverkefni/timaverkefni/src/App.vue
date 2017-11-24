@@ -10,9 +10,9 @@
           <p>Amount of Stations: {{response.length}}</p><br>
           <div class="box" id="place" v-for="petrol in sortedStations">
                <h1 style="float:left; color:black" class="title is-6">{{petrol.company}}</h1>
-               <h1 style="float:right; color:#c0c0c0">Bensin95 - {{petrol.bensin95}}</h1><br><br>
+               <h1 style="float:right; color:#c0c0c0" class="price">Bensin95 - {{petrol.bensin95}}</h1><br><br>
                <h1 style="float:left; color:black" class="subtitle is-6">{{petrol.name}}</h1>
-               <h1 style="float:right; color:#c0c0c0">Diesel - {{petrol.diesel}}</h1><br>
+               <h1 style="float:right; color:#c0c0c0" class="price">Diesel - {{petrol.diesel}}</h1><br>
           </div>
      </div>
 </template>
@@ -74,6 +74,8 @@
 
 <style>
      .box :hover{
-          color: black;
+          .price {
+                color: black;
+          }
      }
 </style>
